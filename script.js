@@ -125,7 +125,6 @@ function mode(e){
 function btnReset(){
     let btns=document.querySelectorAll('.btn');
     for(let i=1;i<btns.length;i++){
-        console.log(btns[i].classList.contains('active-btn'));
         if(btns[i].classList.contains('active-btn')){
             btns[i].classList.remove('active-btn');
         }
@@ -135,13 +134,20 @@ function btnReset(){
 function newGrid(){
     let c=0;
     while(c===0){
-        nr=parseInt(prompt('Set the number of rows between 16-100: '));
-        nc=parseInt(prompt('Set the number of columns between 16-100: '));
-        if(nr>100||nr<16||isNaN(nr)||nc<16||nc>100||isNaN(nc)){
-            alert('Your rows or columns must be bewteen 16 and 100 integer values.')
+        nr=(prompt('Set the number of rows between 16-100: '));
+        nc=(prompt('Set the number of columns between 16-100: '));
+        if(nr===null || nc===null) c=1;
+        else{
+            nr=parseInt(nr);
+            nc=parseInt(nc);
+            if(nr>100||nr<16||isNaN(nr)||isNaN(nc)||nc<16||nc>100){
+                alert('Your rows or columns must be bewteen 16 and 100 integer values.');
+            }
+            else{
+                document.querySelector('#grid').textContent='';
+                makeGrid(nr,nc);
+                c=1;
+            }
         }
-        else c=1;
     }
-    document.querySelector('#grid').textContent='';
-    makeGrid(nr,nc);
 }
