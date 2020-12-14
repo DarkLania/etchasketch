@@ -23,16 +23,20 @@ body{
     justify-content: center;
 }
 
-.btn:hover{
-    background-color: rgb(231, 184, 184);
-}
-
 .btn{
     margin: 0px 4px 0px 3px;
     width: 80px;
     height: 30px;
     background-color: rgb(207, 131, 131);
     border:none;
+}
+
+.btn:hover{
+    background-color: rgb(231, 184, 184);
+}
+
+.active-btn{
+    background-color: rgb(155, 67, 67);
 }
 
 #content{
@@ -50,8 +54,18 @@ body{
 }
 
 #footer{
-    padding-top: 20px;
     text-align: center;
+}
+
+#footer p{
+    padding-top: 10px;
+    color: rgb(97, 34, 34);
+    font-size: large;
+}
+
+#footer a{
+    display:block;
+    padding-top: 20px;
 }
 
 a:visited{
@@ -66,4 +80,26 @@ a:hover{
 a{
     text-decoration: none;
     color: rgb(15, 15, 231);
+}
+
+#grid{
+    display:flex;
+    flex-direction: column;
+}
+
+.row{
+    flex:1;
+    display:flex;
+}
+
+.col{
+    flex:1;
+}
+
+#new{
+    background-color: rgb(184, 127, 86);
+}
+
+#new:hover{
+    background-color: rgb(119, 70, 35);
 }
