@@ -26,10 +26,10 @@ function makeGrid(nr,nc){
     });
 }
 
-function toggleDots(){
+function toggleDots(e){
     if(toggle==='on'){
         toggle='off';
-        enableDots();
+        enableDots(e);
     }
     else{
         toggle='on';
@@ -37,11 +37,12 @@ function toggleDots(){
     }
 }
 
-function enableDots(){
+function enableDots(e){
     let dots=document.querySelectorAll('.col');
     dots.forEach(dot => {
         dot.removeEventListener('click',enableDots);
         dot.addEventListener('mouseover',paint);
+        paint(e);
     });
 }
 
