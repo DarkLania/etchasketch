@@ -28,7 +28,7 @@ body{
     width: 80px;
     height: 30px;
     background-color: rgb(207, 131, 131);
-    border:none;
+    border:1px solid black;
 }
 
 .btn:hover{
@@ -85,6 +85,7 @@ a{
 #grid{
     display:flex;
     flex-direction: column;
+    border: 1px solid black;
 }
 
 .row{
@@ -102,4 +103,15 @@ a{
 
 #new:hover{
     background-color: rgb(119, 70, 35);
+}
+
+#color{
+    border:none;
+    width: 30px;
+}
+
+#custom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }

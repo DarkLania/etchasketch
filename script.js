@@ -54,7 +54,7 @@ function disableDots(){
 }
 
 function paint(e){
-    switch(choice){
+    switch(choice.id){
         case 'black':
             e.target.style.backgroundColor='black';
             break;
@@ -102,6 +102,8 @@ function paint(e){
             e.target.style.backgroundColor='white';
             break;
         case 'custom':
+            let custom=choice.childNodes[1].value;
+            e.target.style.backgroundColor=custom;
             break;
     }
 }
@@ -110,15 +112,16 @@ function bindBtns(){
     let btns=document.querySelectorAll('.btn');
     btns[1].classList.add('active-btn');
     for(let i=1;i<btns.length;i++){
-        btns[i].addEventListener('click',mode);
+        btns[i].addEventListener('click',mode,{capture:true});
     }
 
 }
 
 function mode(e){
     btnReset();
-    choice=e.target.id;
-    e.target.classList.add('active-btn');
+    choice=e.target;
+    if(choice.id==='color')  choice=document.querySelector('#custom');
+    choice.classList.add('active-btn');
 }
 
 function btnReset(){
