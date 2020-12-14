@@ -3,7 +3,7 @@ let nc=16;
 let grey=0;
 let rainbow=0;
 let toggle='on';
-let choice='black';
+let choice=document.querySelector('#black');
 bindBtns();
 document.querySelector('#new').addEventListener('click',newGrid);
 makeGrid(nr,nc);
