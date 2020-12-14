@@ -62,7 +62,6 @@ function paint(e){
             let a=parseInt(Math.random()*255);
             let b=parseInt(Math.random()*255);
             let c=parseInt(Math.random()*255);
-            console.log(a,b,c);
             e.target.style.backgroundColor=
                 `rgb(${a},${b},${c})`;
             break;
