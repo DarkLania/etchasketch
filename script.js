@@ -149,4 +149,5 @@ function newGrid(){
             }
         }
     }
+    toggle='on';
 }
