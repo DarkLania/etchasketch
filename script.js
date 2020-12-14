@@ -144,7 +144,7 @@ function newGrid(){
             nr=parseInt(nr);
             nc=parseInt(nc);
             if(nr>100||nr<16||isNaN(nr)||isNaN(nc)||nc<16||nc>100){
-                alert('Your rows or columns must be bewteen 16 and 100 integer values.');
+                alert('Your rows and columns must be bewteen 16 and 100 integer values.');
             }
             else{
                 document.querySelector('#grid').textContent='';
