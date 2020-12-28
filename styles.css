@@ -115,3 +115,22 @@ a{
     align-items: center;
     justify-content: center;
 }
+
+#sign{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#sign p{
+  display: flex;
+  flex-direction: row;
+  padding:0;
+  font-size: medium;
+}
+
+#sign a{
+  padding:0;
+  font-size: medium;
+}
